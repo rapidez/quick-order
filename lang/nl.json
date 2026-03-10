@@ -1,9 +1,15 @@
 {
     "Add all to cart": "Alles toevoegen aan winkelwagen",
+    "Add products individually": "Individueel producten toevoegen",
     "Added to cart": "Toegevoegd aan winkelwagen",
+    "Drag & drop your files here or select them manually.": "Drag & drop uw bestanden hier of selecteer ze handmatig.",
     "File :file has been successfully uploaded": "Bestand :file is succesvol geüpload",
+    "Item number": "Artikelnummer",
     "New line": "Nieuwe regel",
+    "Order via item number": "Bestellen via artikelnummer",
     "Please choose a child product": "Selecteer een sub-product",
     "Product does not exist": "Product bestaat niet",
+    "Product options": "Productopties",
+    "SKU": "SKU",
     "Upload CSV": "Upload CSV"
 }

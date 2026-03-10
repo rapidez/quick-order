@@ -2,6 +2,7 @@
 
 namespace Rapidez\QuickOrder;
 
+use BladeUI\Icons\Factory;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Rapidez\QuickOrder\Http\ViewComposers\ConfigComposer;
@@ -11,6 +12,7 @@ class QuickOrderServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/rapidez/quick-order.php', 'rapidez.quick-order');
+        $this->registerBladeIconConfig();
     }
 
     public function boot()
@@ -60,6 +62,17 @@ class QuickOrderServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/rapidez/quick-order.php' => config_path('rapidez/quick-order.php'),
         ], 'rapidez-quick-order-config');
+
+        return $this;
+    }
+    protected function registerBladeIconConfig(): self
+    {
+        $this->callAfterResolving(Factory::class, function (Factory $factory) {
+            $factory->add('rapidez::quick-order', [
+                'path'   => __DIR__.'/../resources/svg',
+                'prefix' => 'rapidez::quickorder',
+            ]);
+        });
 
         return $this;
     }
