@@ -1,6 +1,6 @@
-<div class="bg rounded p-5 flex flex-col max-h-80 lg:max-w-96">
+<div class="bg rounded-sm p-5 flex flex-col max-h-80 lg:max-w-96">
     <div class="font-bold mb-4">@lang('Upload CSV')</div>
-    <div class="relative flex border border-dashed rounded bg-white flex-1 flex-col items-center gap-3 text-sm p-2">
+    <div class="relative flex border border-dashed rounded-sm bg-white flex-1 flex-col items-center gap-3 text-sm p-2">
         <input
             v-on:change="quickOrder.importCSV"
             type="file"
