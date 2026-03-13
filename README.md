@@ -15,6 +15,8 @@ You can publish the config with:
 php artisan vendor:publish --tag=rapidez-quick-order-config
 ```
 
+You can disable the default `/quick-order` route by changing the `routes` config option to `false`.
+
 ## Views
 
 You can publish the views with:

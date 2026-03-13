@@ -41,7 +41,9 @@ class QuickOrderServiceProvider extends ServiceProvider
 
     public function bootRoutes() : self
     {
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        if (config('rapidez.quick-order.routes', true)) {
+            $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        }
 
         return $this;
     }
