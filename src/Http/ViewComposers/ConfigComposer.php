@@ -11,6 +11,7 @@ class ConfigComposer
     {
         Config::set('frontend.quick_order.translations', [
             'add' => __('Added to cart'),
+            'csv_success' => __('File :file has been successfully uploaded'),
             'errors' => [
                 'exist' => __('Product does not exist'),
                 'configurable' => __('Please choose a child product'),

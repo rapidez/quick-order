@@ -85,7 +85,7 @@ export default {
             this.productMatches = await this.getProducts(this.products)
 
             event.target.value = "";
-            Notify(window.config.translations.orderlist.csv_success, 'success');
+            Notify(window.config.quick_order.translations.csv_success.replace(':file', this.fileName), 'success');
         },
 
         stripQuotes(string) {
