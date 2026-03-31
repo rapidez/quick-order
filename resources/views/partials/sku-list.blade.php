@@ -19,7 +19,7 @@
                 @include('rapidez-quick-order::partials.product-line')
             </template>
         </div>
-        <button v-on:click="quickOrder.newProduct()" class="text-sm mt-4 hover:underline">
+        <button v-on:click="() => quickOrder.newProduct()" class="text-sm mt-4 hover:underline">
             @lang('New line')
         </button>
     </div>
